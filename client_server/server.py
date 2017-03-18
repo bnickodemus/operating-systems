@@ -10,6 +10,8 @@ mutex = threading.Lock()
 threads = []
 
 def fx(s, f):
+    for t in threads: # join threads
+        t.join()
     # print and exit
     print "sigInt"
     pprint()
